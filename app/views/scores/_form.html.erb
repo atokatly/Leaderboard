@@ -1,0 +1,14 @@
+<%= form_for @score do |f| %>
+  1 = Outlaw , 2 = Tokyo, 3 = Aztec
+  <%= f.label :Challenge_Number %>
+  <%= f.number_field :challengeboard_id %>
+  <%= f.label :team_name %>
+  <%= f.text_field :name %>
+  <%= f.label :completion_time %>
+  <%= f.text_field :time %>
+  <div class="field">
+    add a team image....
+    <%= f.file_field :photo %>
+  </div>
+  <%=f.submit%>
+<%end%>
