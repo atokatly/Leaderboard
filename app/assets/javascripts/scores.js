@@ -5,15 +5,35 @@ $(window).load(function() {
   console.log("I'm running");
   // scrollDown();
   // $("html, body").animate({ scrollTop: $(document).height() }, 35000);
-  setTimeout(function(){
-    $("html, body").animate({ scrollTop: $(document).height() }, 45000);
-  }, 5000);
+  // setTimeout(function(){
+  //   window.onbeforeunload = function () {
+  //   window.scrollTo(0, 0);
+  //   }
+  //   window.location.reload(true)
+  // },45000);
+  //
+  // setTimeout(function(){
+  //   $("html, body").animate({ scrollTop: $(document).height() }, 45000);
+  // });
 
+  function scroll(speed) {
+    $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, speed, function() {
+        $(this).animate({ scrollTop: 0 }, speed);
+    });
+  }
 
-setTimeout(function() {
-   window.onbeforeunload = function() {window.scrollTo(0,0);}
-   location.reload()
- },50000);
+  speed = 45000;
+
+  scroll(speed)
+  setInterval(function(){scroll(speed)}, speed * 2);
+
+});
+
+// setTimeout(function() {
+//    window.onbeforeunload = function() {window.scrollTo(0,0);}
+//    window.location.reload(true)
+//    console.log(location);
+//  },45000);
 
 
 // setInterval(function(){
@@ -26,13 +46,13 @@ setTimeout(function() {
 // },70000);
 
 
-$('html, body').mouseover(function(e) {
-$(this).stop(true);
-
-    }).mouseout(function() {
-         $(this).stop(false);
-    });
-});
+// $('html, body').mouseover(function(e) {
+// $(this).stop(true);
+//
+//     }).mouseout(function() {
+//          $(this).stop(false);
+//     });
+// });
 
 // var scrollDown =  function(){
 //   $("html, body").animate({ scrollTop: $(document).height() }, 35000);
