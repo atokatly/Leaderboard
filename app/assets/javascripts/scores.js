@@ -16,6 +16,7 @@ $(window).load(function() {
   //   $("html, body").animate({ scrollTop: $(document).height() }, 45000);
   // });
 
+//Working code//
   function scroll(speed) {
     $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, speed, function() {
         $(this).animate({ scrollTop: 0 }, speed);
@@ -28,6 +29,8 @@ $(window).load(function() {
   setInterval(function(){scroll(speed)}, speed * 2);
 
 });
+
+// ending
 
 // setTimeout(function() {
 //    window.onbeforeunload = function() {window.scrollTo(0,0);}

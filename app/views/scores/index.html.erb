@@ -17,7 +17,7 @@ h2 {
 .mdl-card--horizontal {
   flex-direction: column;
   height: 1vh; /* 1 */
-  padding-left: 150px;
+  /* padding-left: 150px; */
   width: 100%;
 
   .mdl-card__media {
@@ -73,30 +73,45 @@ h2 {
 /* Add some padding inside the card container */
 .container {
   width: 100%;
-  padding: 16px;
+  padding: 8px;
 
 }
 .column-left{
+  display: inline-block;
   float: left;
-  width: 33%;
-  padding-right: 5px;
-  padding-bottom: 15px;
+  width: 25%;
+  /* padding-right: 5px;
+  padding-bottom: 15px; */
 }
-.column-right{
+
+.column-center2{
+  display: inline-block;
+  width: 25%;
   float: right;
-  width: 33%;
+}
+
+.column-right{
+  display: inline-block;
+  float: right;
+  width: 25%;
 }
 .column-center{
   display: inline-block;
-  width: 33%;
+  width: 25%;
+}
+
+.column-center2{
+  display: inline-block;
+  width: 24%;
+  float: right;
 }
 .card-div-left {
-  float: left;
+  /* float: left; */
   width: 49%;
   padding-right: 5px;
 }
 .card-div-right {
-  float: right;
+  /* float: right; */
   width: 49%;
   padding-left: 5px;
 }
@@ -130,8 +145,8 @@ img {
 }
 
 .demo-card-square.mdl-card {
-  width: 320px;
-  height: 360px;
+  width: 300px;
+  height: 440px;
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
@@ -159,10 +174,33 @@ img {
   </div>
 </div>
 <div class="container">
+  <div class="column-center2" style="margin-bottom: 50px !important; padding-bottom: 50px !important; top: 0% !important;">
+    <%count = 1 %>
+    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+      <img class="image" src="<%= asset_path "voyager_final.jpg", alt: "Voyager Logo"%>" link="/voyager" alt="Voyager">
+    </div>
+    <%@voyager.each do |score|%>
+      <div class="demo-card-square mdl-card mdl-shadow--2dp">
+        <a href="/scores/<%=score.id%>"><%=image_tag(score.photo.url, :class => 'image')%></a>
+      <div class="mdl-card__title mdl-card--expand">
+        <h2 class="mdl-card__title-text">#<%=count%> <%=score.name%></h2>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <b>Completion Time: </b><%=score.time%>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="/scores/<%=score.id%>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          Voyager Scoreboard
+        </a>
+      </div>
+    </div>
+    <%count +=1%>
+  <%end%>
+</div>
    <div class="column-center">
      <%count = 1 %>
      <div class="demo-card-square mdl-card mdl-shadow--2dp">
-       <img class="image" src="<%= asset_path "tokyo.jpg", alt: "Outlaw Logo"%>" link="/western" alt="The Outlaw of El Paso">
+       <img class="image" src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo Logo"%>" link="/tokyo" alt="The Tokyo Heist">
      </div>
      <%@tokyo.each do |score|%>
        <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -185,7 +223,7 @@ img {
       <div class="column-left">
         <%count = 1 %>
         <div class="demo-card-square mdl-card mdl-shadow--2dp">
-          <img class="image" src="<%= asset_path "outlaw_color.jpg", alt: "Outlaw Logo"%>" link="/western" alt="The Outlaw of El Paso">
+          <img class="image" src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw Logo"%>" link="/western" alt="The Outlaw of El Paso">
         </div>
         <%@outlaw.each do |score|%>
           <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -205,10 +243,11 @@ img {
           <%count +=1%>
         <%end%>
       </div>
+
       <div class="column-right">
         <%count = 1 %>
         <div class="demo-card-square mdl-card mdl-shadow--2dp">
-          <img class="image" src="<%= asset_path "tomb_of_gods.jpg", alt: "Outlaw Logo"%>" link="/western" alt="The Outlaw of El Paso">
+          <img class="image" src="<%= asset_path "aztec_final.jpg", alt: "Tomb Logo"%>" link="/tomb" alt="The Tomb of the Gods">
         </div>
         <%@aztec.each do |score|%>
           <div class="demo-card-square mdl-card mdl-shadow--2dp">

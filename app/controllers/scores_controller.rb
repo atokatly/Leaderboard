@@ -6,6 +6,7 @@ class ScoresController < ApplicationController
     @aztec = Score.where(challengeboard_id: 3).order(:time).limit(5)
     @outlaw = Score.where(challengeboard_id: 1).order(:time).limit(5)
     @tokyo = Score.where(challengeboard_id: 2).order(:time).limit(5)
+    @voyager = Score.where(challengeboard_id: 4).order(:time).limit(5)
 
   end
 
