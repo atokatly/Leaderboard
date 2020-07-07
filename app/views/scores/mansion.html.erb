@@ -164,7 +164,8 @@ img {
     <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">HOME</a>
     <a href="/photos" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-user"></i> NEW SCORE</a>
     <a href="/challengeboards" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-user"></i> NEW CHALLENGE</a>
-    <a href="/mansion" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">PORTAL MANSION LEADERBOARD</a>
+    <a href="/" class="w3-hide-small w3-bar-item w3-button" data-turbolinks="false">ORIGINAL LEADERBOARD</a>
+
 
     <!-- <a href="#escape-rooms" class="w3-bar-item w3-button" data-turbolinks="false"><i class="fa fa-th"></i> ESCAPE ROOMS</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small" data-turbolinks="false"><i class="fa fa-envelope"></i> CONTACT</a>
@@ -178,7 +179,7 @@ img {
   <div class="column-center2" style="margin-bottom: 50px !important; padding-bottom: 50px !important; top: 0% !important;">
     <%count = 1 %>
     <div class="demo-card-square mdl-card mdl-shadow--2dp">
-      <img class="image" src="<%= asset_path "voyager_final.jpg", alt: "Voyager Logo"%>" link="/voyager" alt="Voyager">
+      <img class="image" src="<%= asset_path "bridesgame.png", alt: "Voyager Logo"%>" link="/voyager" alt="Voyager">
     </div>
     <%@voyager.each do |score|%>
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -191,7 +192,7 @@ img {
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <a href="/scores/<%=score.id%>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Voyager Scoreboard
+          Bride's Game Scoreboard
         </a>
       </div>
     </div>
@@ -201,7 +202,7 @@ img {
    <div class="column-center">
      <%count = 1 %>
      <div class="demo-card-square mdl-card mdl-shadow--2dp">
-       <img class="image" src="<%= asset_path "tokyo_final.jpg", alt: "Tokyo Logo"%>" link="/tokyo" alt="The Tokyo Heist">
+       <img class="image" src="<%= asset_path "ragdoll.png", alt: "Tokyo Logo"%>" link="/tokyo" alt="The Tokyo Heist">
      </div>
      <%@tokyo.each do |score|%>
        <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -214,7 +215,7 @@ img {
        </div>
        <div class="mdl-card__actions mdl-card--border">
          <a href="/scores/<%=score.id%>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-           Tokyo Heist Scoreboard
+           Rag Doll Scoreboard
          </a>
        </div>
        </div>
@@ -224,7 +225,7 @@ img {
       <div class="column-left">
         <%count = 1 %>
         <div class="demo-card-square mdl-card mdl-shadow--2dp">
-          <img class="image" src="<%= asset_path "outlaw_final.jpg", alt: "Outlaw Logo"%>" link="/western" alt="The Outlaw of El Paso">
+          <img class="image" src="<%= asset_path "portalmansionfinal.png", alt: "Outlaw Logo"%>" link="/western" alt="The Outlaw of El Paso">
         </div>
         <%@outlaw.each do |score|%>
           <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -237,7 +238,7 @@ img {
           </div>
           <div class="mdl-card__actions mdl-card--border">
             <a href="/scores/<%=score.id%>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              Outlaw of El Paso Scoreboard
+              Portal Mansion Scoreboard
             </a>
           </div>
           </div>
@@ -248,7 +249,7 @@ img {
       <div class="column-right">
         <%count = 1 %>
         <div class="demo-card-square mdl-card mdl-shadow--2dp">
-          <img class="image" src="<%= asset_path "aztec_final.jpg", alt: "Tomb Logo"%>" link="/tomb" alt="The Tomb of the Gods">
+          <img class="image" src="<%= asset_path "lostwoods.png", alt: "Tomb Logo"%>" link="/tomb" alt="The Tomb of the Gods">
         </div>
         <%@aztec.each do |score|%>
           <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -261,7 +262,7 @@ img {
           </div>
           <div class="mdl-card__actions mdl-card--border">
             <a href="/scores/<%=score.id%>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              Tomb of the Gods Scoreboard
+              Lost Woods Scoreboard
             </a>
           </div>
         </div>
