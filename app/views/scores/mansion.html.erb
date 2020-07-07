@@ -181,7 +181,7 @@ img {
     <div class="demo-card-square mdl-card mdl-shadow--2dp">
       <img class="image" src="<%= asset_path "bridesgame.png", alt: "Voyager Logo"%>" link="/voyager" alt="Voyager">
     </div>
-    <%@voyager.each do |score|%>
+    <%@bride.each do |score|%>
       <div class="demo-card-square mdl-card mdl-shadow--2dp">
         <a href="/scores/<%=score.id%>"><%=image_tag(score.photo.url, :class => 'image')%></a>
       <div class="mdl-card__title mdl-card--expand">
@@ -204,7 +204,7 @@ img {
      <div class="demo-card-square mdl-card mdl-shadow--2dp">
        <img class="image" src="<%= asset_path "ragdoll.png", alt: "Tokyo Logo"%>" link="/tokyo" alt="The Tokyo Heist">
      </div>
-     <%@tokyo.each do |score|%>
+     <%@doll.each do |score|%>
        <div class="demo-card-square mdl-card mdl-shadow--2dp">
          <a href="/scores/<%=score.id%>"><%=image_tag(score.photo.url, :class => 'image')%></a>
        <div class="mdl-card__title mdl-card--expand">
@@ -227,7 +227,7 @@ img {
         <div class="demo-card-square mdl-card mdl-shadow--2dp">
           <img class="image" src="<%= asset_path "portalmansionfinal.png", alt: "Outlaw Logo"%>" link="/western" alt="The Outlaw of El Paso">
         </div>
-        <%@outlaw.each do |score|%>
+        <%@mansion.each do |score|%>
           <div class="demo-card-square mdl-card mdl-shadow--2dp">
             <a href="/scores/<%=score.id%>"><%=image_tag(score.photo.url, :class => 'image')%></a>
           <div class="mdl-card__title mdl-card--expand">
@@ -251,7 +251,7 @@ img {
         <div class="demo-card-square mdl-card mdl-shadow--2dp">
           <img class="image" src="<%= asset_path "lostwoods.png", alt: "Tomb Logo"%>" link="/tomb" alt="The Tomb of the Gods">
         </div>
-        <%@aztec.each do |score|%>
+        <%@woods.each do |score|%>
           <div class="demo-card-square mdl-card mdl-shadow--2dp">
             <a href="/scores/<%=score.id%>"><%=image_tag(score.photo.url, :class => 'image')%></a>
           <div class="mdl-card__title mdl-card--expand">

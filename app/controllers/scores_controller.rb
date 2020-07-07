@@ -15,6 +15,10 @@ class ScoresController < ApplicationController
     @outlaw = Score.where(challengeboard_id: 1).order(:time).limit(5)
     @tokyo = Score.where(challengeboard_id: 2).order(:time).limit(5)
     @voyager = Score.where(challengeboard_id: 4).order(:time).limit(5)
+    @mansion = Score.where(challengeboard_id: 5).order(:time).limit(5)
+    @doll = Score.where(challengeboard_id: 6).order(:time).limit(5)
+    @woods = Score.where(challengeboard_id: 7).order(:time).limit(5)
+    @bride = Score.where(challengeboard_id: 8).order(:time).limit(5)
   end
 
   # GET /scores/1
